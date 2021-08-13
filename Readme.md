@@ -17,7 +17,8 @@ Within that environment, install the necessary requirements.
 After writing the .py file, various .html files, and .css file use the following command to run the local webserver. You can type `localhost:5000` to see the webpage
 `python3 app.py`
 
-To create the local database:
+# To create the local database:
+
 1. Activate the environment, if the environment isn't running.
 `source env/bin/activate`
 2. In the command line, open an interactive python3 shell:
@@ -29,5 +30,26 @@ To create the local database:
 5. The database is setup, go ahead and exit out of the interactive python shell using the following command.
 `exit()`
 
-A little code to add
+# Create the Procfile
+In the repo, create the Procfile using touch.
+`touch Procfile`
+Then, open the Procfile using VSCode or another code editor and enter the following:
+`web: gunicorn app:app` (I'm assuming the name of your python file is what you put after the semicolon)
+
+# Pushing to Heroku
+Type `heroku login` in your command line
+
+Freeze requirements:
+`pip3 install gunicorn`
+
+`pip3 freeze > requirements.txt` (Check to make sure you're only putting the necessary requirements...)
+
+`git init`
+`git add .`
+`git commit -m "enter your message here"`
+`heroku create name-of-app`
+`git remote -v` (This will show you where you're pushing your code to in heroku)
+`git push heroku master`
+
+
 
