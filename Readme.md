@@ -29,3 +29,5 @@ To create the local database:
 5. The database is setup, go ahead and exit out of the interactive python shell using the following command.
 `exit()`
 
+Just a minor change to get rid of later
+
