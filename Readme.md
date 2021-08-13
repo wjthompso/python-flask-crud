@@ -1,7 +1,6 @@
-Here are the commands that were used.
-
+# Here are the command line arguments that were used.
+Here's the original tutorial:
 https://www.youtube.com/watch?v=Z1RJmh_OqeA
-
 
 
 First, we had to create our virtual environment, so we have to install
@@ -27,7 +26,7 @@ After writing the .py file, various .html files, and .css file use the following
 `from app import db`
 4. Then, type the following and hit enter:
 `db.create_all()`
-5. The database is setup, go ahead and exit out of the interactive python shell using the following command.
+5. The database is setup and should show up as `test.db`, where the name seems to come from line 8 of the .py file: `app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'`, go ahead and exit out of the interactive python shell using the following command.
 `exit()`
 
 # Create the Procfile
